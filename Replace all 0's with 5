@@ -1,0 +1,10 @@
+class GfG {
+    int convertfive(int num) {
+        // Your code here
+        String numStr = String.valueOf(num);
+        numStr = numStr.replace('0', '5');
+        
+        // Parse the modified string back to an integer
+        return Integer.parseInt(numStr);
+}
+}
