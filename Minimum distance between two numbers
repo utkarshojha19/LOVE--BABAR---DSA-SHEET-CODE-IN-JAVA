@@ -1,0 +1,21 @@
+class Solution {
+    int minDist(int a[], int n, int x, int y) {
+        // code here
+    int ans = Integer.MAX_VALUE;
+    int recent_X = -1;
+    int recent_Y = -1;
+    
+    for(int i =0; i<n; i++){
+        if(a[i]==x){
+            recent_X =i;
+        }
+        if(a[i]==y){
+            recent_Y=i;
+        }
+        if(recent_X != -1 && recent_Y != -1){
+            ans = Math.min(ans, Math.abs(recent_X-recent_Y));
+        }
+    }
+    return ans == Integer.MAX_VALUE ? -1 : ans;
+    }
+}
